@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plataforma</title>
+    <meta charset="UTF-8" />
+
+    <link href="kendo/styles/kendo.dataviz.mobile.min.css" rel="stylesheet" />
+
+    <!-- Once the final theme is chosen the redundant css reference should removed -->
+    <link href="kendo/styles/kendo.dataviz.flat.min.css" rel="stylesheet" />
+    <link href="kendo/styles/kendo.dataviz.silver.min.css" rel="stylesheet" />
+
+    <link href="styles/main.css" rel="stylesheet" />
+
+    <script src="cordova.js"></script>
+    <script src="kendo/js/jquery.min.js"></script>
+    <script src="kendo/js/kendo.dataviz.mobile.min.js"></script>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/pie-chart.js"></script>
+    <script src="scripts/gauge.js"></script>
+    <script src="scripts/qr-code.js"></script>
+    <script src="scripts/stock-chart.js"></script>
+    <script src="scripts/cap.js"></script>
+    <script src="scripts/push.js"></script>
+    <script id="telerikhelperrsstemplate" type="text/x-kendo-template">
+         <p class="fechacs">#=fecha#</p>
+         <p class="eventcs">#=event#</p>
+         <p class="headlinecs">#=headline#</p>
+         <p class="descriptioncs">#=description#</p>
+         <p class="sendercs">#=sender#</p>
+     </script>   
+    
+    
+</head>
+
+<body>
+
+    <!-- RSS View -->
+    <div data-role="view" id="tabstrip-rss" data-title="Avisos de ciclón tropical">
+<ul id="telerikhelperview"
+data-source="RSSDS"
+data-endlessscroll="true"
+data-template="telerikhelperrsstemplate"
+data-role="listview"
+data-style="inset">
+</ul>
+</div>
+    <!--Layout-->
+    <div data-role="layout" data-id="mobile-tabstrip">
+        <!--Header-->
+        <div data-role="header">
+            <div data-role="navbar">
+                <span data-role="view-title"></span>
+            </div>
+        </div>
+
+        <!--Footer-->
+        <div data-role="footer">
+            <div data-role="tabstrip">
+               Avisos de ciclón tropical
+               
+            </div>
+        </div>
+    </div>
+</body>
+</html>
